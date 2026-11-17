@@ -1,0 +1,19 @@
+<?php
+
+$s_plugin_ModoDaltonico_name = 'Colorblind Mode';
+$s_plugin_ModoDaltonico_description = 'Accessibility plugin that applies color filters for users with color vision deficiency (protanopia, deuteranopia, tritanopia).';
+$s_plugin_ModoDaltonico_activar = 'Enable';
+$s_plugin_ModoDaltonico_desactivar = 'Disable';
+$s_plugin_ModoDaltonico_protanopia = 'Protanopia (red-blind)';
+$s_plugin_ModoDaltonico_deuteranopia = 'Deuteranopia (green-blind)';
+$s_plugin_ModoDaltonico_tritanopia = 'Tritanopia (blue-blind)';
+$s_plugin_ModoDaltonico_guardar = 'Save';
+$s_plugin_ModoDaltonico_cancelar = 'Cancel';
+$s_plugin_ModoDaltonico_modo_activo = 'Colorblind mode active';
+$s_plugin_ModoDaltonico_modo_inactivo = 'Colorblind mode inactive';
+$s_plugin_ModoDaltonico_indicador_activo = 'Active';
+$s_plugin_ModoDaltonico_configuracion = 'Colorblind Mode';
+$s_plugin_ModoDaltonico_activado = 'Enabled';
+$s_plugin_ModoDaltonico_desactivado = 'Disabled';
+$s_plugin_ModoDaltonico_activacion = 'Activation';
+$s_plugin_ModoDaltonico_tipo_contraste = 'Contrast Type';

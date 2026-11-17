@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Modo Daltonico - Accessibility Filters for MantisBT
+   Uses CSS filter adjustments without modifying element colors directly.
+   ========================================================================== */
+
+/* ---------- Protanopia (red-blind) ---------- */
+body.md-protanopia {
+	filter: url('#md-protanopia-filter');
+}
+
+/* ---------- Deuteranopia (green-blind) ---------- */
+body.md-deuteranopia {
+	filter: url('#md-deuteranopia-filter');
+}
+
+/* ---------- Tritanopia (blue-blind) ---------- */
+body.md-tritanopia {
+	filter: url('#md-tritanopia-filter');
+}
+
+/* ---------- Floating Toggle Button ---------- */
+.md-toggle {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 99999;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 6px;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.md-toggle-btn {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	border: 2px solid #555;
+	background-color: #fff;
+	color: #333;
+	font-size: 22px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	transition: background-color 0.2s ease, border-color 0.2s ease;
+	line-height: 1;
+}
+
+.md-toggle-btn:hover {
+	background-color: #f0f0f0;
+}
+
+.md-toggle-btn:focus {
+	outline: 3px solid #4a90d9;
+	outline-offset: 2px;
+}
+
+.md-toggle-btn[aria-pressed="true"] {
+	background-color: #2b7cba;
+	border-color: #1b5e8a;
+	color: #fff;
+}
+
+.md-toggle-btn[aria-pressed="true"]:hover {
+	background-color: #236aa3;
+}
+
+/* ---------- Type Selector ---------- */
+.md-type-selector {
+	display: none;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	padding: 6px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.md-type-selector.md-visible {
+	display: block;
+}
+
+.md-type-selector select {
+	font-size: 13px;
+	padding: 4px 8px;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	background: #fafafa;
+	color: #333;
+	cursor: pointer;
+}
+
+.md-type-selector select:focus {
+	outline: 2px solid #4a90d9;
+	outline-offset: 1px;
+}
+
+/* ---------- Active Indicator Badge ---------- */
+.md-badge {
+	display: none;
+	background-color: #2b7cba;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 600;
+	padding: 3px 10px;
+	border-radius: 12px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	white-space: nowrap;
+	pointer-events: none;
+}
+
+.md-badge.md-visible {
+	display: inline-block;
+}
+
+/* ---------- SVG Filters Container ---------- */
+.md-svg-filters {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
